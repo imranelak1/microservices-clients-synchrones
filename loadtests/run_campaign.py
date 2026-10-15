@@ -300,6 +300,10 @@ def benchmark(mode, method):
     with raw.open(encoding="utf-8") as source:
         for sample in csv.DictReader(source):
             users = int(sample["threadName"].split()[0])
+            # JMX group names retain the nominal full-load labels in a smoke run.
+            # Its thread properties are overridden to 1..5, so report those actual values.
+            if SMOKE:
+                users = {10: 1, 50: 2, 100: 3, 200: 4, 500: 5}[users]
             elapsed = int(sample["elapsed"])
             began = int(sample["timeStamp"])
             group = groups.setdefault(
