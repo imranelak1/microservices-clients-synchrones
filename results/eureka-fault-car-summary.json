@@ -1,0 +1,49 @@
+{
+  "mode": "eureka",
+  "fault": "car",
+  "target_rate_total_rps": 100,
+  "duration_seconds": 65,
+  "events": [
+    {
+      "event": "stopped",
+      "elapsed_seconds": 8.190490212999975,
+      "time": 1792031471.24314
+    },
+    {
+      "event": "restart_requested",
+      "elapsed_seconds": 20.00035101000003,
+      "time": 1792031483.0530007
+    }
+  ],
+  "methods": [
+    {
+      "method": "rest",
+      "requests": 2167,
+      "errors": 673,
+      "error_percent": 31.06,
+      "outage_window_error_percent": 100.0,
+      "first_success_after_restart_seconds": 5.201,
+      "max_elapsed_ms": 168.59
+    },
+    {
+      "method": "feign",
+      "requests": 2167,
+      "errors": 673,
+      "error_percent": 31.06,
+      "outage_window_error_percent": 100.0,
+      "first_success_after_restart_seconds": 5.212,
+      "max_elapsed_ms": 157.32
+    },
+    {
+      "method": "webclient",
+      "requests": 2166,
+      "errors": 674,
+      "error_percent": 31.12,
+      "outage_window_error_percent": 100.0,
+      "first_success_after_restart_seconds": 5.221,
+      "max_elapsed_ms": 149.34
+    }
+  ],
+  "registered_after_restart": true,
+  "healthy_after_scenario_cleanup": true
+}

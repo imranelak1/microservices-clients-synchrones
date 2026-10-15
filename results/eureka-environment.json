@@ -1,0 +1,35 @@
+{
+  "mode": "eureka",
+  "smoke": false,
+  "platform": "Linux-6.17.0-1022-azure-x86_64-with-glibc2.35",
+  "logical_cpus": 4,
+  "physical_cpus": 2,
+  "host_ram_mib": 15990,
+  "cgroup_memory_max": "8589934592",
+  "cgroup_cpu_max": "400000 100000",
+  "jvm_flags": [
+    "-Xmx160m",
+    "-Xss512k",
+    "-XX:MaxMetaspaceSize=160m",
+    "-XX:ActiveProcessorCount=2",
+    "-Dhttp.maxConnections=500"
+  ],
+  "jmeter_heap": "192m",
+  "users": [
+    10,
+    50,
+    100,
+    200,
+    500
+  ],
+  "duration_per_level_seconds": 30,
+  "ramp_seconds": 10,
+  "warmup_requests": 50,
+  "registered_service_address": "127.0.0.1",
+  "response_json_bytes": 3070,
+  "car_delay_ms": 20,
+  "fresh_full_stack_per_method": true,
+  "fault_rate_total_rps": 100,
+  "fault_stop_seconds": 15,
+  "java": "openjdk version \"17.0.16\" 2025-07-15\nOpenJDK Runtime Environment Temurin-17.0.16+8 (build 17.0.16+8)\nOpenJDK 64-Bit Server VM Temurin-17.0.16+8 (build 17.0.16+8, mixed mode, sharing)\n"
+}

@@ -13,7 +13,12 @@ En mode Consul, lancer les services avec `--spring.profiles.active=consul` et d�
 
 Les routes Client sont `/api/clients/1/car/rest`, `/feign` et `/webclient`. Les trois utilisent le nom logique SERVICE-VOITURE ; WebClient utilise volontairement `block()`.
 
-Le plan JMeter monte de 10 à 500 utilisateurs. Les mesures réelles de latence, débit et ressources sont dans `results/`, avec les essais de panne et l’analyse comparée. Les erreurs distantes renvoient 503. Les captures montrent les enregistrements et les réponses des services réellement lancés.
+Le plan JMeter monte de 10 à 500 utilisateurs. Les mesures réelles de latence, débit et ressources sont dans `results/`, avec les essais de panne et [l’analyse comparée](results/ANALYSE.md). Les erreurs distantes renvoient 503. Les captures montrent les enregistrements et les réponses des services réellement lancés.
+
+La [campagne Linux](https://github.com/imranelak1/microservices-clients-synchrones/actions/runs/38670504936) utilise deux runners au même budget.
 
 ![Résultats](screenshots/results.png)
 ![Validation](screenshots/tests.png)
+![Eureka](screenshots/eureka-registration.png)
+![Consul](screenshots/consul-registration.png)
+![Campagne](screenshots/benchmark-github.png)

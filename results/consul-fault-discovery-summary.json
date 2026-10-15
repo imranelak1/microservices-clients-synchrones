@@ -1,0 +1,50 @@
+{
+  "mode": "consul",
+  "fault": "discovery",
+  "target_rate_total_rps": 100,
+  "duration_seconds": 65,
+  "events": [
+    {
+      "event": "stopped",
+      "elapsed_seconds": 5.006731746000014,
+      "time": 1792031512.6815612
+    },
+    {
+      "event": "restart_requested",
+      "elapsed_seconds": 20.001675172999967,
+      "time": 1792031527.676505
+    }
+  ],
+  "methods": [
+    {
+      "method": "rest",
+      "requests": 2167,
+      "errors": 1202,
+      "error_percent": 55.47,
+      "outage_window_error_percent": 0.0,
+      "first_success_after_restart_seconds": 0.011,
+      "max_elapsed_ms": 24.93
+    },
+    {
+      "method": "feign",
+      "requests": 2167,
+      "errors": 1203,
+      "error_percent": 55.51,
+      "outage_window_error_percent": 0.0,
+      "first_success_after_restart_seconds": 0.021,
+      "max_elapsed_ms": 29.55
+    },
+    {
+      "method": "webclient",
+      "requests": 2166,
+      "errors": 1202,
+      "error_percent": 55.49,
+      "outage_window_error_percent": 0.0,
+      "first_success_after_restart_seconds": 0.002,
+      "max_elapsed_ms": 26.86
+    }
+  ],
+  "registered_after_restart": false,
+  "manual_recovery": "Restart both application processes to register them again.",
+  "healthy_after_scenario_cleanup": true
+}

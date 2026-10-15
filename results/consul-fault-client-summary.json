@@ -1,0 +1,49 @@
+{
+  "mode": "consul",
+  "fault": "client",
+  "target_rate_total_rps": 100,
+  "duration_seconds": 65,
+  "events": [
+    {
+      "event": "stopped",
+      "elapsed_seconds": 7.098408771999971,
+      "time": 1792031593.548703
+    },
+    {
+      "event": "restart_requested",
+      "elapsed_seconds": 20.001241522999976,
+      "time": 1792031606.4515355
+    }
+  ],
+  "methods": [
+    {
+      "method": "rest",
+      "requests": 2167,
+      "errors": 636,
+      "error_percent": 29.35,
+      "outage_window_error_percent": 100.0,
+      "first_success_after_restart_seconds": 4.092,
+      "max_elapsed_ms": 502.7
+    },
+    {
+      "method": "feign",
+      "requests": 2167,
+      "errors": 637,
+      "error_percent": 29.4,
+      "outage_window_error_percent": 100.0,
+      "first_success_after_restart_seconds": 4.102,
+      "max_elapsed_ms": 497.82
+    },
+    {
+      "method": "webclient",
+      "requests": 2166,
+      "errors": 636,
+      "error_percent": 29.36,
+      "outage_window_error_percent": 100.0,
+      "first_success_after_restart_seconds": 4.081,
+      "max_elapsed_ms": 947.46
+    }
+  ],
+  "registered_after_restart": true,
+  "healthy_after_scenario_cleanup": true
+}

@@ -1,0 +1,714 @@
+{
+  "github_run_id": "38670504936",
+  "url": "https://github.com/imranelak1/microservices-clients-synchrones/actions/runs/38670504936",
+  "profiles": {
+    "eureka": {
+      "environment": {
+        "mode": "eureka",
+        "smoke": false,
+        "platform": "Linux-6.17.0-1022-azure-x86_64-with-glibc2.35",
+        "logical_cpus": 4,
+        "physical_cpus": 2,
+        "host_ram_mib": 15990,
+        "cgroup_memory_max": "8589934592",
+        "cgroup_cpu_max": "400000 100000",
+        "jvm_flags": [
+          "-Xmx160m",
+          "-Xss512k",
+          "-XX:MaxMetaspaceSize=160m",
+          "-XX:ActiveProcessorCount=2",
+          "-Dhttp.maxConnections=500"
+        ],
+        "jmeter_heap": "192m",
+        "users": [
+          10,
+          50,
+          100,
+          200,
+          500
+        ],
+        "duration_per_level_seconds": 30,
+        "ramp_seconds": 10,
+        "warmup_requests": 50,
+        "registered_service_address": "127.0.0.1",
+        "response_json_bytes": 3070,
+        "car_delay_ms": 20,
+        "fresh_full_stack_per_method": true,
+        "fault_rate_total_rps": 100,
+        "fault_stop_seconds": 15,
+        "java": "openjdk version \"17.0.16\" 2025-07-15\nOpenJDK Runtime Environment Temurin-17.0.16+8 (build 17.0.16+8)\nOpenJDK 64-Bit Server VM Temurin-17.0.16+8 (build 17.0.16+8, mixed mode, sharing)\n"
+      },
+      "artifact_directory": "clients-eureka-full\\results\\remote-eureka\\38670504936-1",
+      "campaigns": {
+        "rest": {
+          "groups": 5,
+          "requests": 420415,
+          "errors": 0,
+          "raw_jtl_recomputed": true
+        },
+        "feign": {
+          "groups": 5,
+          "requests": 418862,
+          "errors": 0,
+          "raw_jtl_recomputed": true
+        },
+        "webclient": {
+          "groups": 5,
+          "requests": 426927,
+          "errors": 0,
+          "raw_jtl_recomputed": true
+        }
+      },
+      "faults": {
+        "car": {
+          "mode": "eureka",
+          "fault": "car",
+          "target_rate_total_rps": 100,
+          "duration_seconds": 65,
+          "events": [
+            {
+              "event": "stopped",
+              "elapsed_seconds": 8.190490212999975,
+              "time": 1792031471.24314
+            },
+            {
+              "event": "restart_requested",
+              "elapsed_seconds": 20.00035101000003,
+              "time": 1792031483.0530007
+            }
+          ],
+          "methods": [
+            {
+              "method": "rest",
+              "requests": 2167,
+              "errors": 673,
+              "error_percent": 31.06,
+              "outage_window_error_percent": 100.0,
+              "first_success_after_restart_seconds": 5.201,
+              "max_elapsed_ms": 168.59
+            },
+            {
+              "method": "feign",
+              "requests": 2167,
+              "errors": 673,
+              "error_percent": 31.06,
+              "outage_window_error_percent": 100.0,
+              "first_success_after_restart_seconds": 5.212,
+              "max_elapsed_ms": 157.32
+            },
+            {
+              "method": "webclient",
+              "requests": 2166,
+              "errors": 674,
+              "error_percent": 31.12,
+              "outage_window_error_percent": 100.0,
+              "first_success_after_restart_seconds": 5.221,
+              "max_elapsed_ms": 149.34
+            }
+          ],
+          "registered_after_restart": true,
+          "healthy_after_scenario_cleanup": true
+        },
+        "discovery": {
+          "mode": "eureka",
+          "fault": "discovery",
+          "target_rate_total_rps": 100,
+          "duration_seconds": 65,
+          "events": [
+            {
+              "event": "stopped",
+              "elapsed_seconds": 5.095692220999922,
+              "time": 1792031533.4244645
+            },
+            {
+              "event": "restart_requested",
+              "elapsed_seconds": 20.001480448999928,
+              "time": 1792031548.3302522
+            }
+          ],
+          "methods": [
+            {
+              "method": "rest",
+              "requests": 2167,
+              "errors": 9,
+              "error_percent": 0.42,
+              "outage_window_error_percent": 0.0,
+              "first_success_after_restart_seconds": 0.011,
+              "max_elapsed_ms": 34.64
+            },
+            {
+              "method": "feign",
+              "requests": 2167,
+              "errors": 9,
+              "error_percent": 0.42,
+              "outage_window_error_percent": 0.0,
+              "first_success_after_restart_seconds": 0.022,
+              "max_elapsed_ms": 36.03
+            },
+            {
+              "method": "webclient",
+              "requests": 2166,
+              "errors": 10,
+              "error_percent": 0.46,
+              "outage_window_error_percent": 0.0,
+              "first_success_after_restart_seconds": 0.002,
+              "max_elapsed_ms": 39.18
+            }
+          ],
+          "registered_after_restart": true,
+          "healthy_after_scenario_cleanup": true
+        },
+        "client": {
+          "mode": "eureka",
+          "fault": "client",
+          "target_rate_total_rps": 100,
+          "duration_seconds": 65,
+          "events": [
+            {
+              "event": "stopped",
+              "elapsed_seconds": 10.14739582499999,
+              "time": 1792031603.7235043
+            },
+            {
+              "event": "restart_requested",
+              "elapsed_seconds": 20.001439551999965,
+              "time": 1792031613.5775478
+            }
+          ],
+          "methods": [
+            {
+              "method": "rest",
+              "requests": 2167,
+              "errors": 653,
+              "error_percent": 30.13,
+              "outage_window_error_percent": 100.0,
+              "first_success_after_restart_seconds": 4.6,
+              "max_elapsed_ms": 341.43
+            },
+            {
+              "method": "feign",
+              "requests": 2167,
+              "errors": 653,
+              "error_percent": 30.13,
+              "outage_window_error_percent": 100.0,
+              "first_success_after_restart_seconds": 4.583,
+              "max_elapsed_ms": 360.13
+            },
+            {
+              "method": "webclient",
+              "requests": 2166,
+              "errors": 653,
+              "error_percent": 30.15,
+              "outage_window_error_percent": 100.0,
+              "first_success_after_restart_seconds": 4.591,
+              "max_elapsed_ms": 813.88
+            }
+          ],
+          "registered_after_restart": true,
+          "healthy_after_scenario_cleanup": true
+        }
+      },
+      "junit_tests": 5
+    },
+    "consul": {
+      "environment": {
+        "mode": "consul",
+        "smoke": false,
+        "platform": "Linux-6.17.0-1022-azure-x86_64-with-glibc2.35",
+        "logical_cpus": 4,
+        "physical_cpus": 2,
+        "host_ram_mib": 15990,
+        "cgroup_memory_max": "8589934592",
+        "cgroup_cpu_max": "400000 100000",
+        "jvm_flags": [
+          "-Xmx160m",
+          "-Xss512k",
+          "-XX:MaxMetaspaceSize=160m",
+          "-XX:ActiveProcessorCount=2",
+          "-Dhttp.maxConnections=500"
+        ],
+        "jmeter_heap": "192m",
+        "users": [
+          10,
+          50,
+          100,
+          200,
+          500
+        ],
+        "duration_per_level_seconds": 30,
+        "ramp_seconds": 10,
+        "warmup_requests": 50,
+        "registered_service_address": "127.0.0.1",
+        "response_json_bytes": 3070,
+        "car_delay_ms": 20,
+        "fresh_full_stack_per_method": true,
+        "fault_rate_total_rps": 100,
+        "fault_stop_seconds": 15,
+        "java": "openjdk version \"17.0.16\" 2025-07-15\nOpenJDK Runtime Environment Temurin-17.0.16+8 (build 17.0.16+8)\nOpenJDK 64-Bit Server VM Temurin-17.0.16+8 (build 17.0.16+8, mixed mode, sharing)\n"
+      },
+      "artifact_directory": "clients-consul-full\\results\\remote-consul\\38670504936-1",
+      "campaigns": {
+        "rest": {
+          "groups": 5,
+          "requests": 419486,
+          "errors": 0,
+          "raw_jtl_recomputed": true
+        },
+        "feign": {
+          "groups": 5,
+          "requests": 419367,
+          "errors": 0,
+          "raw_jtl_recomputed": true
+        },
+        "webclient": {
+          "groups": 5,
+          "requests": 428569,
+          "errors": 0,
+          "raw_jtl_recomputed": true
+        }
+      },
+      "faults": {
+        "car": {
+          "mode": "consul",
+          "fault": "car",
+          "target_rate_total_rps": 100,
+          "duration_seconds": 65,
+          "events": [
+            {
+              "event": "stopped",
+              "elapsed_seconds": 5.183465066999929,
+              "time": 1792031447.6158779
+            },
+            {
+              "event": "restart_requested",
+              "elapsed_seconds": 20.001138020999974,
+              "time": 1792031462.4335508
+            }
+          ],
+          "methods": [
+            {
+              "method": "rest",
+              "requests": 2167,
+              "errors": 639,
+              "error_percent": 29.49,
+              "outage_window_error_percent": 100.0,
+              "first_success_after_restart_seconds": 4.182,
+              "max_elapsed_ms": 262.51
+            },
+            {
+              "method": "feign",
+              "requests": 2167,
+              "errors": 639,
+              "error_percent": 29.49,
+              "outage_window_error_percent": 100.0,
+              "first_success_after_restart_seconds": 4.161,
+              "max_elapsed_ms": 282.27
+            },
+            {
+              "method": "webclient",
+              "requests": 2166,
+              "errors": 639,
+              "error_percent": 29.5,
+              "outage_window_error_percent": 100.0,
+              "first_success_after_restart_seconds": 4.17,
+              "max_elapsed_ms": 273.08
+            }
+          ],
+          "registered_after_restart": true,
+          "healthy_after_scenario_cleanup": true
+        },
+        "discovery": {
+          "mode": "consul",
+          "fault": "discovery",
+          "target_rate_total_rps": 100,
+          "duration_seconds": 65,
+          "events": [
+            {
+              "event": "stopped",
+              "elapsed_seconds": 5.006731746000014,
+              "time": 1792031512.6815612
+            },
+            {
+              "event": "restart_requested",
+              "elapsed_seconds": 20.001675172999967,
+              "time": 1792031527.676505
+            }
+          ],
+          "methods": [
+            {
+              "method": "rest",
+              "requests": 2167,
+              "errors": 1202,
+              "error_percent": 55.47,
+              "outage_window_error_percent": 0.0,
+              "first_success_after_restart_seconds": 0.011,
+              "max_elapsed_ms": 24.93
+            },
+            {
+              "method": "feign",
+              "requests": 2167,
+              "errors": 1203,
+              "error_percent": 55.51,
+              "outage_window_error_percent": 0.0,
+              "first_success_after_restart_seconds": 0.021,
+              "max_elapsed_ms": 29.55
+            },
+            {
+              "method": "webclient",
+              "requests": 2166,
+              "errors": 1202,
+              "error_percent": 55.49,
+              "outage_window_error_percent": 0.0,
+              "first_success_after_restart_seconds": 0.002,
+              "max_elapsed_ms": 26.86
+            }
+          ],
+          "registered_after_restart": false,
+          "manual_recovery": "Restart both application processes to register them again.",
+          "healthy_after_scenario_cleanup": true
+        },
+        "client": {
+          "mode": "consul",
+          "fault": "client",
+          "target_rate_total_rps": 100,
+          "duration_seconds": 65,
+          "events": [
+            {
+              "event": "stopped",
+              "elapsed_seconds": 7.098408771999971,
+              "time": 1792031593.548703
+            },
+            {
+              "event": "restart_requested",
+              "elapsed_seconds": 20.001241522999976,
+              "time": 1792031606.4515355
+            }
+          ],
+          "methods": [
+            {
+              "method": "rest",
+              "requests": 2167,
+              "errors": 636,
+              "error_percent": 29.35,
+              "outage_window_error_percent": 100.0,
+              "first_success_after_restart_seconds": 4.092,
+              "max_elapsed_ms": 502.7
+            },
+            {
+              "method": "feign",
+              "requests": 2167,
+              "errors": 637,
+              "error_percent": 29.4,
+              "outage_window_error_percent": 100.0,
+              "first_success_after_restart_seconds": 4.102,
+              "max_elapsed_ms": 497.82
+            },
+            {
+              "method": "webclient",
+              "requests": 2166,
+              "errors": 636,
+              "error_percent": 29.36,
+              "outage_window_error_percent": 100.0,
+              "first_success_after_restart_seconds": 4.081,
+              "max_elapsed_ms": 947.46
+            }
+          ],
+          "registered_after_restart": true,
+          "healthy_after_scenario_cleanup": true
+        }
+      },
+      "junit_tests": 5
+    }
+  },
+  "checks": [
+    "30groups recomputed from6rawJTLarchives",
+    "6faultscenarios6500requests each",
+    "4CPU8GiBsamebudget",
+    "5JUnit tests eachprofile, zero errors or failures",
+    "allfaultscenarios restoredhealthy"
+  ],
+  "github_run": {
+    "conclusion": "success",
+    "createdAt": "2026-10-15T02:20:56Z",
+    "headSha": "ab9918613d4efa48be1941e39b728b5a99403ee1",
+    "jobs": [
+      {
+        "completedAt": "2026-10-15T02:34:29Z",
+        "conclusion": "success",
+        "databaseId": 116212270673,
+        "name": "benchmark (eureka)",
+        "startedAt": "2026-10-15T02:20:59Z",
+        "status": "completed",
+        "steps": [
+          {
+            "completedAt": "2026-10-15T02:21:01Z",
+            "conclusion": "success",
+            "name": "Set up job",
+            "number": 1,
+            "startedAt": "2026-10-15T02:21:00Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-15T02:21:01Z",
+            "conclusion": "success",
+            "name": "Run actions/checkout@v4",
+            "number": 2,
+            "startedAt": "2026-10-15T02:21:01Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-15T02:21:02Z",
+            "conclusion": "success",
+            "name": "Run actions/setup-java@v4",
+            "number": 3,
+            "startedAt": "2026-10-15T02:21:01Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-15T02:21:34Z",
+            "conclusion": "success",
+            "name": "Compiler et tester le profil exclusif",
+            "number": 4,
+            "startedAt": "2026-10-15T02:21:02Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-15T02:22:07Z",
+            "conclusion": "success",
+            "name": "PrÃ©parer le mÃªme budget de mesure",
+            "number": 5,
+            "startedAt": "2026-10-15T02:21:34Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-15T02:34:27Z",
+            "conclusion": "success",
+            "name": "ExÃ©cuter la dÃ©couverte, les trois clients et les pannes rÃ©elles",
+            "number": 6,
+            "startedAt": "2026-10-15T02:22:07Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-15T02:34:28Z",
+            "conclusion": "success",
+            "name": "Conserver les mesures brutes et les tests",
+            "number": 7,
+            "startedAt": "2026-10-15T02:34:27Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-15T02:34:28Z",
+            "conclusion": "success",
+            "name": "ArrÃªter uniquement la campagne de ce runner",
+            "number": 8,
+            "startedAt": "2026-10-15T02:34:28Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-15T02:34:28Z",
+            "conclusion": "success",
+            "name": "Post Run actions/setup-java@v4",
+            "number": 15,
+            "startedAt": "2026-10-15T02:34:28Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-15T02:34:28Z",
+            "conclusion": "success",
+            "name": "Post Run actions/checkout@v4",
+            "number": 16,
+            "startedAt": "2026-10-15T02:34:28Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-15T02:34:28Z",
+            "conclusion": "success",
+            "name": "Complete job",
+            "number": 17,
+            "startedAt": "2026-10-15T02:34:28Z",
+            "status": "completed"
+          }
+        ],
+        "url": "https://github.com/imranelak1/microservices-clients-synchrones/actions/runs/38670504936/job/116212270673"
+      },
+      {
+        "completedAt": "2026-10-15T02:34:19Z",
+        "conclusion": "success",
+        "databaseId": 116212270954,
+        "name": "benchmark (consul)",
+        "startedAt": "2026-10-15T02:21:00Z",
+        "status": "completed",
+        "steps": [
+          {
+            "completedAt": "2026-10-15T02:21:02Z",
+            "conclusion": "success",
+            "name": "Set up job",
+            "number": 1,
+            "startedAt": "2026-10-15T02:21:01Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-15T02:21:03Z",
+            "conclusion": "success",
+            "name": "Run actions/checkout@v4",
+            "number": 2,
+            "startedAt": "2026-10-15T02:21:02Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-15T02:21:06Z",
+            "conclusion": "success",
+            "name": "Run actions/setup-java@v4",
+            "number": 3,
+            "startedAt": "2026-10-15T02:21:03Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-15T02:21:34Z",
+            "conclusion": "success",
+            "name": "Compiler et tester le profil exclusif",
+            "number": 4,
+            "startedAt": "2026-10-15T02:21:06Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-15T02:22:05Z",
+            "conclusion": "success",
+            "name": "PrÃ©parer le mÃªme budget de mesure",
+            "number": 5,
+            "startedAt": "2026-10-15T02:21:34Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-15T02:34:13Z",
+            "conclusion": "success",
+            "name": "ExÃ©cuter la dÃ©couverte, les trois clients et les pannes rÃ©elles",
+            "number": 6,
+            "startedAt": "2026-10-15T02:22:05Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-15T02:34:16Z",
+            "conclusion": "success",
+            "name": "Conserver les mesures brutes et les tests",
+            "number": 7,
+            "startedAt": "2026-10-15T02:34:13Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-15T02:34:16Z",
+            "conclusion": "success",
+            "name": "ArrÃªter uniquement la campagne de ce runner",
+            "number": 8,
+            "startedAt": "2026-10-15T02:34:16Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-15T02:34:16Z",
+            "conclusion": "success",
+            "name": "Post Run actions/setup-java@v4",
+            "number": 15,
+            "startedAt": "2026-10-15T02:34:16Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-15T02:34:16Z",
+            "conclusion": "success",
+            "name": "Post Run actions/checkout@v4",
+            "number": 16,
+            "startedAt": "2026-10-15T02:34:16Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-15T02:34:16Z",
+            "conclusion": "success",
+            "name": "Complete job",
+            "number": 17,
+            "startedAt": "2026-10-15T02:34:16Z",
+            "status": "completed"
+          }
+        ],
+        "url": "https://github.com/imranelak1/microservices-clients-synchrones/actions/runs/38670504936/job/116212270954"
+      }
+    ],
+    "status": "completed",
+    "updatedAt": "2026-10-15T02:34:30Z",
+    "url": "https://github.com/imranelak1/microservices-clients-synchrones/actions/runs/38670504936"
+  },
+  "files_sha256": {
+    "evidence/remote-runtime/eureka-car-1792030933.txt": "6d8db21106b56ffbc10d011810de29e41d86edb29567c13d776c6dd4260110e0",
+    "evidence/remote-runtime/eureka-car-1792031114.txt": "24238d56f32bbebe3ea6e6c48fef4b999c4e7d5771454bde00a71a7bfe851a1c",
+    "evidence/remote-runtime/eureka-car-1792031295.txt": "9f294a22e971dc154fd45eb61e144c32d0894c1e96cc779a0ba34e458b7cf132",
+    "evidence/remote-runtime/eureka-car-1792031483.txt": "d2d2478665008978c6d84ab5a661dd1fa21cf609b4810b287fa88466500ef2a1",
+    "evidence/remote-runtime/eureka-client-1792030933.txt": "32615b140012b8ee50421a4899b4e2aefc840515700a5a497f9616dc01a109e6",
+    "evidence/remote-runtime/eureka-client-1792031114.txt": "97d657877476ebe7b8f96f39b84159c9f8eb25e4e5edb974e7da6d487424a154",
+    "evidence/remote-runtime/eureka-client-1792031295.txt": "7b1e1beea3ae3e8ce851ca51cfd5cd0d7e02a0e70061eb3d68da832e8141fd14",
+    "evidence/remote-runtime/eureka-client-1792031613.txt": "fc047d577422ead885cda206b68a1388aa5ea755614e20b6ba50fe90de9fbc29",
+    "evidence/remote-runtime/eureka-discovery-1792030927.txt": "2ebb7cf5399e3e030c2f58174366e239882a81c7f9d5245679ce191cb5d02318",
+    "evidence/remote-runtime/eureka-discovery-1792031109.txt": "a9a3877a2cf67991bcf776a56cd0870a634eafe94f3313d5c33ff554f30843a6",
+    "evidence/remote-runtime/eureka-discovery-1792031290.txt": "1dd93d223e49720ba1ffc8361c198cb294fcd39a68cb3a6e41b03f50e04983e2",
+    "evidence/remote-runtime/eureka-discovery-1792031548.txt": "f66a094fa5437bf9badbafacd5648104fd751f4e3a60b8a0cea79bdd833a87ec",
+    "results/eureka-environment.json": "9caf9a84219cb144eedfe29d4687af451980716686ada0f200cc78478fe6e4f4",
+    "results/eureka-fault-car-summary.json": "9ae0404fdca8305070bbf6f4c4ea509ca6aa5f8b37ae1f73c47e9078dbfb2ab1",
+    "results/eureka-fault-car.csv": "e5719ceb308b8b0e57039fac24cd5bbc7f7b9b82231d6075fc825fb249e6aa31",
+    "results/eureka-fault-client-summary.json": "09859f142e2622bd7c93c6f16189e1fa7b7cc43df07a86dca2cb197dd97e52f6",
+    "results/eureka-fault-client.csv": "3c7c3fc8e75305b90601b9b0e0b09a6cc0a9a3b83416bca6088de816bf20923b",
+    "results/eureka-fault-discovery-summary.json": "47eda77006e2f173827dc58acae1eb4e8508f52c2b38cc0c663bb24e0bd0bcae",
+    "results/eureka-fault-discovery.csv": "7391b6725335221c1499e0bea4e1c79e1ded4eb3db95e09f3b328c40dd5d1b68",
+    "results/eureka-feign-jmeter-output.txt": "4ef0bef7050372be516a6f7364db5f27521921e4d6d5816f1059f96ac4e6f5fe",
+    "evidence/remote-runtime/eureka-feign-jmeter.txt": "25b0e66a85235d241427cf16a14528b09e348b15984fea6d6cb541c34dc46439",
+    "results/eureka-feign-resources.csv": "1b0ae7a92104039124e643c00f4d4c0563768ec602d0d3fea5f0dcbfb2c40f4b",
+    "results/eureka-feign-summary.json": "d6b6a79676adecaffa725b78089913b6237c2e23ff2655abda5768b608176a0d",
+    "results/eureka-feign.jtl.gz": "d0b4a300219427822e330f39bb0606bf9000a664590a510f79e6f410ca88945a",
+    "results/eureka-functional.json": "3cb1da53b88bef8d678106f4bcba155b74699a3f2dc5c0a3189efd0a89f86d8d",
+    "results/eureka-rest-jmeter-output.txt": "fabe969173048afa60fc37cc5be492d736aa111e369c194e6bd9a84ef1bf64a2",
+    "evidence/remote-runtime/eureka-rest-jmeter.txt": "317bf6c6e2d06530313058815da3e156ba2177895675b8c89c69025682d54cf2",
+    "results/eureka-rest-resources.csv": "cda51fcc7d97ba2162aff978ed64a5c9974f2f06d18add7d32e16b70286bade8",
+    "results/eureka-rest-summary.json": "636ecc6a9cddf6d49817640eaac2146c96c6c0b81dc8497663d9fd4aa43084b5",
+    "results/eureka-rest.jtl.gz": "dba73249adee87de2348210ab4991bb7d17eb45db644fa1e374afa59698b639f",
+    "results/eureka-webclient-jmeter-output.txt": "49ca3071816b363195729e4a647a1dc2e1715044db988f30288610774f3ec343",
+    "evidence/remote-runtime/eureka-webclient-jmeter.txt": "70b0980c45ae15dad575deea5d00afdde84d5024d784af86eb4c5dfdccbad91c",
+    "results/eureka-webclient-resources.csv": "6689899b2370e08ed00ed765a7e04c021c6b870442365f06b781efe789627b7a",
+    "results/eureka-webclient-summary.json": "6a24b5e9b914d00e42b40772ea57d407c442ce6d4b3de075a21d2ae11fd52582",
+    "results/eureka-webclient.jtl.gz": "c8c563f729f6ec5fa68e1ab4e3eb90abaa60a632ffa6fdb18b5822e0911790bb",
+    "evidence/eureka-processes-after-cleanup.json": "4162086c0e7d097053bb75e8b22af1ed0aaa5095e6cf2596c43dfed52dea9e6a",
+    "evidence/remote-runtime/consul-car-1792030926.txt": "5b5a3b5eb4c42faf04828dbb2311c5dcb3bc73cca8d408fcd1a74ecb33a17531",
+    "evidence/remote-runtime/consul-car-1792031100.txt": "85196fc2ef11e1164cd78bd4193a692600a9924168847cae5c1b20e54d47f39c",
+    "evidence/remote-runtime/consul-car-1792031272.txt": "9d11dc7b6f4dcd9c94985017bdf3f9de73cf49c24ca0534c791dc23ca787491c",
+    "evidence/remote-runtime/consul-car-1792031462.txt": "40744dcf8824347695230451c887b1d75f4f959497608abdf1c7f04c34c9bcfa",
+    "evidence/remote-runtime/consul-car-1792031575.txt": "7363c21ea3f6a37aceae539d8bd1cb812787d6ad39cf503dc0ef09e3358fbbe3",
+    "evidence/remote-runtime/consul-client-1792030926.txt": "dd4a6135232c2e347f02cf674ebe490831725caaaf3e3fe510c1280567cec1fd",
+    "evidence/remote-runtime/consul-client-1792031100.txt": "34d590681f2ffc2932262bd883b2eaf1882f002d2a0b0dc13c318095da0003bb",
+    "evidence/remote-runtime/consul-client-1792031272.txt": "41fc80d1dd681d4800e4735e278bff2802246febdf9c05700983663b49b1b35e",
+    "evidence/remote-runtime/consul-client-1792031575.txt": "0590b42c2d3e76ba3c198bc28af01751f2749c62153b83ff453a2b807f6306ac",
+    "evidence/remote-runtime/consul-client-1792031606.txt": "0053d11ce8dda82dec39bac010c9988e8b86540138788fc3e18919e40c8a89ac",
+    "evidence/remote-runtime/consul-discovery-1792030925.txt": "09ef30253f0cb0f7d30689c47935f03a32777261d963efd1e56b02ce586253d4",
+    "evidence/remote-runtime/consul-discovery-1792031099.txt": "f4de029f8f366422b27cab7b0538203e8b0a1643a771c135ad54ab0140e72f04",
+    "evidence/remote-runtime/consul-discovery-1792031271.txt": "05ea30054c2529a7073800efba57b975d2854a79e7826290f15d277ded907900",
+    "evidence/remote-runtime/consul-discovery-1792031527.txt": "4a068959060e3575fc08bef595a2e2d8a752da7a55d7fee2638ef98a6de7f56e",
+    "results/consul-environment.json": "16b38ac64381ec44d7de660737a1c2751279181fe002298c905cffd5a4d4eb47",
+    "results/consul-fault-car-summary.json": "d32ef1037dc3ee7d518099086038d60ef0a038923d1863f36219af79855855f7",
+    "results/consul-fault-car.csv": "9d7e30739e726e33cb52460c2d704d643a95beea9825340414e3b45ca104ff0f",
+    "results/consul-fault-client-summary.json": "1a7b4f807821e01aaa21034f6879b4255ae7b9ce7106420597f3d70aa6f30ad4",
+    "results/consul-fault-client.csv": "a9d6818c358687f09dac2d0511d97b35c6caa584c76e4e2ed3d5100dd79e169a",
+    "results/consul-fault-discovery-summary.json": "c7bccfc1b5a7aac8ba828fa223c90645c17e4aa8e6c540634483128102237923",
+    "results/consul-fault-discovery.csv": "51bb6c819337e8d7030504f43f6e5b0fb0d9ec3ef175c1b9efae5a00dc4fb3e3",
+    "results/consul-feign-jmeter-output.txt": "8cf97fcdfb1d33983bcce2dddd2409469a6f64ce058f742416b5f054a0e974b3",
+    "evidence/remote-runtime/consul-feign-jmeter.txt": "41b161e996cf9cf3247220bb821f53ffec1225aa1dd5349575ff764b773c4d24",
+    "results/consul-feign-resources.csv": "4b6ae38959248bae2e4fd3f5912347ac28e653962515868d19e80be8c224d067",
+    "results/consul-feign-summary.json": "23b56f4f8adc165876d2a170f0c2e7165c3c85925f048696e55735c0e0b2c59c",
+    "results/consul-feign.jtl.gz": "d90ab33294999a195b2afb55459aaea8d9e0c18d92657bed30d747b01e828f00",
+    "results/consul-functional.json": "c687b01e38c2140685c77a567b0c762dde5f4c6ba5b3ec12ade95773f063caf1",
+    "results/consul-rest-jmeter-output.txt": "3b62210aff46bc6c858da1faa20a90052ef353be8b7753c5aa755c9f86a301de",
+    "evidence/remote-runtime/consul-rest-jmeter.txt": "cea3ad58d54ee9975b4cae538091bd1e8a582f51e617685dcde70100e38f79f1",
+    "results/consul-rest-resources.csv": "f59505396bb47786e9bd94c314695e07c8375d2ffc944907ac00e9023b005f02",
+    "results/consul-rest-summary.json": "e4e3836ce6fed23e0f5f193d01215698de5cd08b2d28c883837b641427bcd344",
+    "results/consul-rest.jtl.gz": "e7a17c8a6508e54daa1b9137070cfef2435c7df1e8b34ec37d940a83eb7d1d0e",
+    "results/consul-webclient-jmeter-output.txt": "644ac8296c2f3a97a496ee5cdb5dc03942a4320213884b09a010c5c3c1916986",
+    "evidence/remote-runtime/consul-webclient-jmeter.txt": "5ea321b4681527a9cc8ed69c6cabd1acbcfaa0be2c482ce8b1eeed8e71f4e34b",
+    "results/consul-webclient-resources.csv": "0f2664cfe3c1d1584d5b5c69ef3f63224c5896f56b825951fcb428e254c39bcb",
+    "results/consul-webclient-summary.json": "f93ee6bf85049b2268625cec870e2c2da1815df8faf1e1355ba68bd41d0b9df1",
+    "results/consul-webclient.jtl.gz": "3f6af4188972046e836dd4eec0168270452e712f8d4ba78c8e7350ff199f3400",
+    "evidence/consul-processes-after-cleanup.json": "14edaa9d466409f2105f653617e0495956c720d63a8203b9de5a26fc4414ee9c"
+  }
+}

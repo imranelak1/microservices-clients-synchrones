@@ -1,0 +1,102 @@
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::               (v3.2.12)
+
+2026-10-15T02:31:26.939Z  WARN 4933 --- [SERVICE-VOITURE] [           main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2026-10-15T02:32:13.603Z  WARN 4933 --- [SERVICE-VOITURE] [reshExecutor-%d] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: I/O error on GET request for "http://127.0.0.1:19261/eureka/apps/delta": Connect to http://127.0.0.1:19261 [/127.0.0.1] failed: Connection refused
+2026-10-15T02:32:13.617Z  WARN 4933 --- [SERVICE-VOITURE] [reshExecutor-%d] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: I/O error on GET request for "http://127.0.0.1:19261/eureka/apps/delta": Connect to http://127.0.0.1:19261 [/127.0.0.1] failed: Connection refused
+2026-10-15T02:32:15.629Z  WARN 4933 --- [SERVICE-VOITURE] [reshExecutor-%d] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: I/O error on GET request for "http://127.0.0.1:19261/eureka/apps/delta": Connect to http://127.0.0.1:19261 [/127.0.0.1] failed: Connection refused
+2026-10-15T02:32:17.522Z  WARN 4933 --- [SERVICE-VOITURE] [beatExecutor-%d] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: I/O error on PUT request for "http://127.0.0.1:19261/eureka/apps/SERVICE-VOITURE/runnervm8k3b6.dqphzwasu1dulfyg11icnuwebg.bx.internal.cloudapp.net:SERVICE-VOITURE:19262": Connect to http://127.0.0.1:19261 [/127.0.0.1] failed: Connection refused
+2026-10-15T02:32:17.529Z  WARN 4933 --- [SERVICE-VOITURE] [beatExecutor-%d] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: I/O error on PUT request for "http://127.0.0.1:19261/eureka/apps/SERVICE-VOITURE/runnervm8k3b6.dqphzwasu1dulfyg11icnuwebg.bx.internal.cloudapp.net:SERVICE-VOITURE:19262": Connect to http://127.0.0.1:19261 [/127.0.0.1] failed: Connection refused
+2026-10-15T02:32:17.529Z ERROR 4933 --- [SERVICE-VOITURE] [beatExecutor-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SERVICE-VOITURE/runnervm8k3b6.dqphzwasu1dulfyg11icnuwebg.bx.internal.cloudapp.net:SERVICE-VOITURE:19262 - was unable to send heartbeat!
+
+com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112) ~[eureka-client-2.0.4.jar!/:2.0.4]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89) ~[eureka-client-2.0.4.jar!/:2.0.4]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92) ~[eureka-client-2.0.4.jar!/:2.0.4]
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:76) ~[eureka-client-2.0.4.jar!/:2.0.4]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89) ~[eureka-client-2.0.4.jar!/:2.0.4]
+	at com.netflix.discovery.DiscoveryClient.renew(DiscoveryClient.java:845) ~[eureka-client-2.0.4.jar!/:2.0.4]
+	at com.netflix.discovery.DiscoveryClient$HeartbeatThread.run(DiscoveryClient.java:1402) ~[eureka-client-2.0.4.jar!/:2.0.4]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source) ~[na:na]
+	at java.base/java.util.concurrent.FutureTask.run(Unknown Source) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source) ~[na:na]
+	at java.base/java.lang.Thread.run(Unknown Source) ~[na:na]
+
+2026-10-15T02:32:17.640Z  WARN 4933 --- [SERVICE-VOITURE] [reshExecutor-%d] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: I/O error on GET request for "http://127.0.0.1:19261/eureka/apps/delta": Connect to http://127.0.0.1:19261 [/127.0.0.1] failed: Connection refused
+2026-10-15T02:32:19.651Z  WARN 4933 --- [SERVICE-VOITURE] [reshExecutor-%d] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: I/O error on GET request for "http://127.0.0.1:19261/eureka/apps/delta": Connect to http://127.0.0.1:19261 [/127.0.0.1] failed: Connection refused
+2026-10-15T02:32:21.664Z  WARN 4933 --- [SERVICE-VOITURE] [reshExecutor-%d] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: I/O error on GET request for "http://127.0.0.1:19261/eureka/apps/delta": Connect to http://127.0.0.1:19261 [/127.0.0.1] failed: Connection refused
+2026-10-15T02:32:22.541Z  WARN 4933 --- [SERVICE-VOITURE] [beatExecutor-%d] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: I/O error on PUT request for "http://127.0.0.1:19261/eureka/apps/SERVICE-VOITURE/runnervm8k3b6.dqphzwasu1dulfyg11icnuwebg.bx.internal.cloudapp.net:SERVICE-VOITURE:19262": Connect to http://127.0.0.1:19261 [/127.0.0.1] failed: Connection refused
+2026-10-15T02:32:22.541Z ERROR 4933 --- [SERVICE-VOITURE] [beatExecutor-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SERVICE-VOITURE/runnervm8k3b6.dqphzwasu1dulfyg11icnuwebg.bx.internal.cloudapp.net:SERVICE-VOITURE:19262 - was unable to send heartbeat!
+
+com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112) ~[eureka-client-2.0.4.jar!/:2.0.4]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89) ~[eureka-client-2.0.4.jar!/:2.0.4]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92) ~[eureka-client-2.0.4.jar!/:2.0.4]
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:76) ~[eureka-client-2.0.4.jar!/:2.0.4]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89) ~[eureka-client-2.0.4.jar!/:2.0.4]
+	at com.netflix.discovery.DiscoveryClient.renew(DiscoveryClient.java:845) ~[eureka-client-2.0.4.jar!/:2.0.4]
+	at com.netflix.discovery.DiscoveryClient$HeartbeatThread.run(DiscoveryClient.java:1402) ~[eureka-client-2.0.4.jar!/:2.0.4]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source) ~[na:na]
+	at java.base/java.util.concurrent.FutureTask.run(Unknown Source) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source) ~[na:na]
+	at java.base/java.lang.Thread.run(Unknown Source) ~[na:na]
+
+2026-10-15T02:32:23.677Z  WARN 4933 --- [SERVICE-VOITURE] [reshExecutor-%d] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: I/O error on GET request for "http://127.0.0.1:19261/eureka/apps/delta": Connect to http://127.0.0.1:19261 [/127.0.0.1] failed: Connection refused
+2026-10-15T02:32:25.687Z  WARN 4933 --- [SERVICE-VOITURE] [reshExecutor-%d] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: I/O error on GET request for "http://127.0.0.1:19261/eureka/apps/delta": Connect to http://127.0.0.1:19261 [/127.0.0.1] failed: Connection refused
+2026-10-15T02:32:27.549Z  WARN 4933 --- [SERVICE-VOITURE] [beatExecutor-%d] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: I/O error on PUT request for "http://127.0.0.1:19261/eureka/apps/SERVICE-VOITURE/runnervm8k3b6.dqphzwasu1dulfyg11icnuwebg.bx.internal.cloudapp.net:SERVICE-VOITURE:19262": Connect to http://127.0.0.1:19261 [/127.0.0.1] failed: Connection refused
+2026-10-15T02:32:27.549Z ERROR 4933 --- [SERVICE-VOITURE] [beatExecutor-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SERVICE-VOITURE/runnervm8k3b6.dqphzwasu1dulfyg11icnuwebg.bx.internal.cloudapp.net:SERVICE-VOITURE:19262 - was unable to send heartbeat!
+
+com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112) ~[eureka-client-2.0.4.jar!/:2.0.4]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89) ~[eureka-client-2.0.4.jar!/:2.0.4]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92) ~[eureka-client-2.0.4.jar!/:2.0.4]
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:76) ~[eureka-client-2.0.4.jar!/:2.0.4]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89) ~[eureka-client-2.0.4.jar!/:2.0.4]
+	at com.netflix.discovery.DiscoveryClient.renew(DiscoveryClient.java:845) ~[eureka-client-2.0.4.jar!/:2.0.4]
+	at com.netflix.discovery.DiscoveryClient$HeartbeatThread.run(DiscoveryClient.java:1402) ~[eureka-client-2.0.4.jar!/:2.0.4]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source) ~[na:na]
+	at java.base/java.util.concurrent.FutureTask.run(Unknown Source) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source) ~[na:na]
+	at java.base/java.lang.Thread.run(Unknown Source) ~[na:na]
+
+2026-10-15T02:32:27.695Z  WARN 4933 --- [SERVICE-VOITURE] [reshExecutor-%d] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: I/O error on GET request for "http://127.0.0.1:19261/eureka/apps/delta": Connect to http://127.0.0.1:19261 [/127.0.0.1] failed: Connection refused
+2026-10-15T02:32:29.724Z  WARN 4933 --- [SERVICE-VOITURE] [reshExecutor-%d] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: I/O error on GET request for "http://127.0.0.1:19261/eureka/apps/delta": Connect to http://127.0.0.1:19261 [/127.0.0.1] failed: Connection refused
+2026-10-15T02:32:31.757Z  WARN 4933 --- [SERVICE-VOITURE] [reshExecutor-%d] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: I/O error on GET request for "http://127.0.0.1:19261/eureka/apps/delta": Connect to http://127.0.0.1:19261 [/127.0.0.1] failed: Connection refused
+2026-10-15T02:32:32.565Z  WARN 4933 --- [SERVICE-VOITURE] [beatExecutor-%d] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: I/O error on PUT request for "http://127.0.0.1:19261/eureka/apps/SERVICE-VOITURE/runnervm8k3b6.dqphzwasu1dulfyg11icnuwebg.bx.internal.cloudapp.net:SERVICE-VOITURE:19262": Connect to http://127.0.0.1:19261 [/127.0.0.1] failed: Connection refused
+2026-10-15T02:32:32.566Z ERROR 4933 --- [SERVICE-VOITURE] [beatExecutor-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SERVICE-VOITURE/runnervm8k3b6.dqphzwasu1dulfyg11icnuwebg.bx.internal.cloudapp.net:SERVICE-VOITURE:19262 - was unable to send heartbeat!
+
+com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112) ~[eureka-client-2.0.4.jar!/:2.0.4]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89) ~[eureka-client-2.0.4.jar!/:2.0.4]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92) ~[eureka-client-2.0.4.jar!/:2.0.4]
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:76) ~[eureka-client-2.0.4.jar!/:2.0.4]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89) ~[eureka-client-2.0.4.jar!/:2.0.4]
+	at com.netflix.discovery.DiscoveryClient.renew(DiscoveryClient.java:845) ~[eureka-client-2.0.4.jar!/:2.0.4]
+	at com.netflix.discovery.DiscoveryClient$HeartbeatThread.run(DiscoveryClient.java:1402) ~[eureka-client-2.0.4.jar!/:2.0.4]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source) ~[na:na]
+	at java.base/java.util.concurrent.FutureTask.run(Unknown Source) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source) ~[na:na]
+	at java.base/java.lang.Thread.run(Unknown Source) ~[na:na]
+
+2026-10-15T02:34:26.316Z  WARN 4933 --- [SERVICE-VOITURE] [coveryClient-%d] c.netflix.discovery.TimedSupervisorTask  : task supervisor timed out
+
+java.util.concurrent.TimeoutException: null
+	at java.base/java.util.concurrent.FutureTask.get(Unknown Source) ~[na:na]
+	at com.netflix.discovery.TimedSupervisorTask.run(TimedSupervisorTask.java:65) ~[eureka-client-2.0.4.jar!/:2.0.4]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source) ~[na:na]
+	at java.base/java.util.concurrent.FutureTask.run(Unknown Source) ~[na:na]
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(Unknown Source) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source) ~[na:na]
+	at java.base/java.lang.Thread.run(Unknown Source) ~[na:na]
+

@@ -1,0 +1,208 @@
+{
+  "conclusion": "success",
+  "createdAt": "2026-10-15T02:20:56Z",
+  "headSha": "ab9918613d4efa48be1941e39b728b5a99403ee1",
+  "jobs": [
+    {
+      "completedAt": "2026-10-15T02:34:29Z",
+      "conclusion": "success",
+      "databaseId": 116212270673,
+      "name": "benchmark (eureka)",
+      "startedAt": "2026-10-15T02:20:59Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-10-15T02:21:01Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-10-15T02:21:00Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-15T02:21:01Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@v4",
+          "number": 2,
+          "startedAt": "2026-10-15T02:21:01Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-15T02:21:02Z",
+          "conclusion": "success",
+          "name": "Run actions/setup-java@v4",
+          "number": 3,
+          "startedAt": "2026-10-15T02:21:01Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-15T02:21:34Z",
+          "conclusion": "success",
+          "name": "Compiler et tester le profil exclusif",
+          "number": 4,
+          "startedAt": "2026-10-15T02:21:02Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-15T02:22:07Z",
+          "conclusion": "success",
+          "name": "PrÃ©parer le mÃªme budget de mesure",
+          "number": 5,
+          "startedAt": "2026-10-15T02:21:34Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-15T02:34:27Z",
+          "conclusion": "success",
+          "name": "ExÃ©cuter la dÃ©couverte, les trois clients et les pannes rÃ©elles",
+          "number": 6,
+          "startedAt": "2026-10-15T02:22:07Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-15T02:34:28Z",
+          "conclusion": "success",
+          "name": "Conserver les mesures brutes et les tests",
+          "number": 7,
+          "startedAt": "2026-10-15T02:34:27Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-15T02:34:28Z",
+          "conclusion": "success",
+          "name": "ArrÃªter uniquement la campagne de ce runner",
+          "number": 8,
+          "startedAt": "2026-10-15T02:34:28Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-15T02:34:28Z",
+          "conclusion": "success",
+          "name": "Post Run actions/setup-java@v4",
+          "number": 15,
+          "startedAt": "2026-10-15T02:34:28Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-15T02:34:28Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@v4",
+          "number": 16,
+          "startedAt": "2026-10-15T02:34:28Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-15T02:34:28Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 17,
+          "startedAt": "2026-10-15T02:34:28Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/imranelak1/microservices-clients-synchrones/actions/runs/38670504936/job/116212270673"
+    },
+    {
+      "completedAt": "2026-10-15T02:34:19Z",
+      "conclusion": "success",
+      "databaseId": 116212270954,
+      "name": "benchmark (consul)",
+      "startedAt": "2026-10-15T02:21:00Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-10-15T02:21:02Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-10-15T02:21:01Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-15T02:21:03Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@v4",
+          "number": 2,
+          "startedAt": "2026-10-15T02:21:02Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-15T02:21:06Z",
+          "conclusion": "success",
+          "name": "Run actions/setup-java@v4",
+          "number": 3,
+          "startedAt": "2026-10-15T02:21:03Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-15T02:21:34Z",
+          "conclusion": "success",
+          "name": "Compiler et tester le profil exclusif",
+          "number": 4,
+          "startedAt": "2026-10-15T02:21:06Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-15T02:22:05Z",
+          "conclusion": "success",
+          "name": "PrÃ©parer le mÃªme budget de mesure",
+          "number": 5,
+          "startedAt": "2026-10-15T02:21:34Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-15T02:34:13Z",
+          "conclusion": "success",
+          "name": "ExÃ©cuter la dÃ©couverte, les trois clients et les pannes rÃ©elles",
+          "number": 6,
+          "startedAt": "2026-10-15T02:22:05Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-15T02:34:16Z",
+          "conclusion": "success",
+          "name": "Conserver les mesures brutes et les tests",
+          "number": 7,
+          "startedAt": "2026-10-15T02:34:13Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-15T02:34:16Z",
+          "conclusion": "success",
+          "name": "ArrÃªter uniquement la campagne de ce runner",
+          "number": 8,
+          "startedAt": "2026-10-15T02:34:16Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-15T02:34:16Z",
+          "conclusion": "success",
+          "name": "Post Run actions/setup-java@v4",
+          "number": 15,
+          "startedAt": "2026-10-15T02:34:16Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-15T02:34:16Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@v4",
+          "number": 16,
+          "startedAt": "2026-10-15T02:34:16Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-15T02:34:16Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 17,
+          "startedAt": "2026-10-15T02:34:16Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/imranelak1/microservices-clients-synchrones/actions/runs/38670504936/job/116212270954"
+    }
+  ],
+  "status": "completed",
+  "updatedAt": "2026-10-15T02:34:30Z",
+  "url": "https://github.com/imranelak1/microservices-clients-synchrones/actions/runs/38670504936"
+}

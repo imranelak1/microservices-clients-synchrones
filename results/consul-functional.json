@@ -1,0 +1,25 @@
+{
+  "mode": "consul",
+  "registered": true,
+  "verified_at": 1792031651.6057658,
+  "responses": {
+    "rest": {
+      "id": 10,
+      "clientId": 1,
+      "payload_bytes": 3070,
+      "details_length": 3000
+    },
+    "feign": {
+      "id": 10,
+      "clientId": 1,
+      "payload_bytes": 3070,
+      "details_length": 3000
+    },
+    "webclient": {
+      "id": 10,
+      "clientId": 1,
+      "payload_bytes": 3070,
+      "details_length": 3000
+    }
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "mode": "consul",
+  "fault": "car",
+  "target_rate_total_rps": 100,
+  "duration_seconds": 65,
+  "events": [
+    {
+      "event": "stopped",
+      "elapsed_seconds": 5.183465066999929,
+      "time": 1792031447.6158779
+    },
+    {
+      "event": "restart_requested",
+      "elapsed_seconds": 20.001138020999974,
+      "time": 1792031462.4335508
+    }
+  ],
+  "methods": [
+    {
+      "method": "rest",
+      "requests": 2167,
+      "errors": 639,
+      "error_percent": 29.49,
+      "outage_window_error_percent": 100.0,
+      "first_success_after_restart_seconds": 4.182,
+      "max_elapsed_ms": 262.51
+    },
+    {
+      "method": "feign",
+      "requests": 2167,
+      "errors": 639,
+      "error_percent": 29.49,
+      "outage_window_error_percent": 100.0,
+      "first_success_after_restart_seconds": 4.161,
+      "max_elapsed_ms": 282.27
+    },
+    {
+      "method": "webclient",
+      "requests": 2166,
+      "errors": 639,
+      "error_percent": 29.5,
+      "outage_window_error_percent": 100.0,
+      "first_success_after_restart_seconds": 4.17,
+      "max_elapsed_ms": 273.08
+    }
+  ],
+  "registered_after_restart": true,
+  "healthy_after_scenario_cleanup": true
+}

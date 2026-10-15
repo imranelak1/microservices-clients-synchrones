@@ -1,0 +1,23 @@
+WARN StatusConsoleListener The use of package scanning to locate plugins is deprecated and will be removed in a future release
+WARN StatusConsoleListener The use of package scanning to locate plugins is deprecated and will be removed in a future release
+WARN StatusConsoleListener The use of package scanning to locate plugins is deprecated and will be removed in a future release
+WARN StatusConsoleListener The use of package scanning to locate plugins is deprecated and will be removed in a future release
+Oct 15, 2026 2:22:25 AM java.util.prefs.FileSystemPreferences$1 run
+INFO: Created user preferences directory.
+Creating summariser <summary>
+Created the tree successfully using /work/loadtests/clients.jmx
+Starting standalone test @ 2026 Oct 15 02:22:25 UTC (1792030945719)
+Waiting for possible Shutdown/StopTestNow/HeapDump/ThreadDump message on port 4445
+summary +    430 in 00:00:04 =  102.1/s Avg:    24 Min:    22 Max:    51 Err:     0 (0.00%) Active: 5 Started: 5 Finished: 0
+summary +  13510 in 00:00:30 =  450.5/s Avg:    21 Min:    20 Max:    32 Err:     0 (0.00%) Active: 21 Started: 31 Finished: 10
+summary =  13940 in 00:00:34 =  407.6/s Avg:    21 Min:    20 Max:    51 Err:     0 (0.00%)
+summary +  61053 in 00:00:30 = 2035.5/s Avg:    21 Min:    20 Max:    36 Err:     0 (0.00%) Active: 41 Started: 101 Finished: 60
+summary =  74993 in 00:01:04 = 1168.2/s Avg:    21 Min:    20 Max:    51 Err:     0 (0.00%)
+summary + 109347 in 00:00:30 = 3644.9/s Avg:    23 Min:    20 Max:    51 Err:     0 (0.00%) Active: 82 Started: 242 Finished: 160
+summary = 184340 in 00:01:34 = 1957.0/s Avg:    22 Min:    20 Max:    51 Err:     0 (0.00%)
+summary + 135110 in 00:00:30 = 4503.7/s Avg:    38 Min:    20 Max:   121 Err:     0 (0.00%) Active: 200 Started: 560 Finished: 360
+summary = 319450 in 00:02:04 = 2572.1/s Avg:    29 Min:    20 Max:   121 Err:     0 (0.00%)
+summary + 100965 in 00:00:26 = 3850.4/s Avg:   120 Min:    21 Max:   645 Err:     0 (0.00%) Active: 0 Started: 860 Finished: 860
+summary = 420415 in 00:02:30 = 2795.0/s Avg:    51 Min:    20 Max:   645 Err:     0 (0.00%)
+Tidying up ...    @ 2026 Oct 15 02:24:56 UTC (1792031096222)
+... end of run
