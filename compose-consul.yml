@@ -1,0 +1,7 @@
+name: course7-clients-consul
+services:
+  consul:
+    image: hashicorp/consul:1.20.6
+    command: agent -dev -client=0.0.0.0
+    mem_limit: 128m
+    ports: ["127.0.0.1:19260:8500"]

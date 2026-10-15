@@ -1,0 +1,19 @@
+CLIENTS SYNCHRONES - MODE CONSUL - EXECUTION REELLE
+GET /actuator/health -> HTTP 200 | 15 bytes | 1054.3 ms
+GET /actuator/health -> HTTP 200 | 15 bytes | 153.0 ms
+GET /api/cars/byClient/1 -> HTTP 200 | 3070 bytes | 72.5 ms
+GET /api/clients/1/car/rest -> HTTP 200 | 3070 bytes | 166.4 ms
+rest: id=10, Toyota Yaris, clientId=1, details=3000 caracteres
+GET /api/clients/1/car/feign -> HTTP 200 | 3070 bytes | 118.3 ms
+feign: id=10, Toyota Yaris, clientId=1, details=3000 caracteres
+GET /api/clients/1/car/webclient -> HTTP 200 | 3070 bytes | 136.4 ms
+webclient: id=10, Toyota Yaris, clientId=1, details=3000 caracteres
+GET /v1/health/service/SERVICE-CLIENT?passing=true -> HTTP 200 | 2644 bytes | 115.5 ms
+SERVICE-CLIENT enregistre dans Consul : passing
+GET /v1/health/service/SERVICE-VOITURE?passing=true -> HTTP 200 | 2650 bytes | 60.1 ms
+SERVICE-VOITURE enregistre dans Consul : passing
+GET /actuator/metrics/jvm.memory.used -> HTTP 200 | 410 bytes | 185.2 ms
+SERVICE-CLIENT JVM memory used : 115.4 MiB
+GET /actuator/metrics/jvm.memory.used -> HTTP 200 | 410 bytes | 133.6 ms
+SERVICE-VOITURE JVM memory used : 104.17 MiB
+VALIDATION REUSSIE : trois reponses identiques et deux services sains.

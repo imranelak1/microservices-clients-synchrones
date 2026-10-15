@@ -1,0 +1,65 @@
+name: Clients synchrones — deux registres isolés
+
+on:
+  workflow_dispatch:
+    inputs:
+      smoke:
+        description: Essai court de préparation, exclu des mesures finales
+        type: boolean
+        default: false
+
+permissions:
+  contents: read
+
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  benchmark:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 35
+    strategy:
+      fail-fast: false
+      matrix:
+        discovery: [eureka, consul]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+          cache: maven
+      - name: Compiler et tester le profil exclusif
+        env:
+          MAVEN_OPTS: -Xmx384m
+        run: mvn -B -P${{ matrix.discovery }} verify -DargLine=-Xmx256m | tee build-${{ matrix.discovery }}.log
+      - name: Préparer le même budget de mesure
+        run: |
+          mkdir -p results
+          lscpu > results/runner-${{ matrix.discovery }}-cpu.txt
+          free -b > results/runner-${{ matrix.discovery }}-memory.txt
+          java -version 2> results/runner-${{ matrix.discovery }}-java.txt
+          docker build -f loadtests/runner.Dockerfile -t clients-benchmark-runner .
+      - name: Exécuter la découverte, les trois clients et les pannes réelles
+        env:
+          DISCOVERY_MODE: ${{ matrix.discovery }}
+          SMOKE: ${{ inputs.smoke }}
+        run: |
+          docker run --name clients-benchmark --network host --cpus=4 --memory=8g \
+            -v "$PWD:/work" -w /work -e DISCOVERY_MODE -e SMOKE -e GITHUB_RUN_ID -e GITHUB_RUN_ATTEMPT \
+            clients-benchmark-runner python3 loadtests/run_campaign.py
+      - name: Conserver les mesures brutes et les tests
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: clients-${{ matrix.discovery }}-${{ inputs.smoke && 'smoke' || 'full' }}
+          retention-days: 1
+          path: |
+            results/remote-${{ matrix.discovery }}${{ inputs.smoke && '-smoke' || '' }}/${{ github.run_id }}-${{ github.run_attempt }}/
+            results/runner-${{ matrix.discovery }}-*.txt
+            build-${{ matrix.discovery }}.log
+            **/surefire-reports/TEST-*.xml
+      - name: Arrêter uniquement la campagne de ce runner
+        if: always()
+        run: docker rm -f clients-benchmark || true

@@ -1,0 +1,17 @@
+CLIENTS SYNCHRONES - MODE EUREKA - EXECUTION REELLE
+GET /actuator/health -> HTTP 200 | 15 bytes | 104.2 ms
+GET /actuator/health -> HTTP 200 | 15 bytes | 22.4 ms
+GET /api/cars/byClient/1 -> HTTP 200 | 3070 bytes | 56.7 ms
+GET /api/clients/1/car/rest -> HTTP 200 | 3070 bytes | 41.1 ms
+rest: id=10, Toyota Yaris, clientId=1, details=3000 caracteres
+GET /api/clients/1/car/feign -> HTTP 200 | 3070 bytes | 50.5 ms
+feign: id=10, Toyota Yaris, clientId=1, details=3000 caracteres
+GET /api/clients/1/car/webclient -> HTTP 200 | 3070 bytes | 45.2 ms
+webclient: id=10, Toyota Yaris, clientId=1, details=3000 caracteres
+SERVICE-CLIENT enregistre dans Eureka : UP
+SERVICE-VOITURE enregistre dans Eureka : UP
+GET /actuator/metrics/jvm.memory.used -> HTTP 200 | 410 bytes | 40.6 ms
+SERVICE-CLIENT JVM memory used : 123.42 MiB
+GET /actuator/metrics/jvm.memory.used -> HTTP 200 | 409 bytes | 33.5 ms
+SERVICE-VOITURE JVM memory used : 89.61 MiB
+VALIDATION REUSSIE : trois reponses identiques et deux services sains.

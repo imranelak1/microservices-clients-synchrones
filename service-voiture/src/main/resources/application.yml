@@ -1,0 +1,19 @@
+server:
+  port: ${SERVER_PORT:8082}
+  tomcat:
+    threads:
+      max: 300
+    accept-count: 1000
+spring:
+  application:
+    name: SERVICE-VOITURE
+  profiles:
+    active: ${DISCOVERY:eureka}
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,metrics,prometheus
+logging:
+  level:
+    root: WARN

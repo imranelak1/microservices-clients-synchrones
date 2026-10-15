@@ -1,0 +1,113 @@
+[INFO] Scanning for projects...
+[INFO] Loaded 24089 auto-discovered prefixes for remote repository central (prefixes-central.txt)
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO] 
+[INFO] microservices-clients-synchrones                                   [pom]
+[INFO] eureka-server                                                      [jar]
+[INFO] service-voiture                                                    [jar]
+[INFO] service-client                                                     [jar]
+[INFO] 
+[INFO] -------------< ma.imrane:microservices-clients-synchrones >-------------
+[INFO] Building microservices-clients-synchrones 1.0.0                    [1/4]
+[INFO]   from pom.xml
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] ----------------------< ma.imrane:eureka-server >-----------------------
+[INFO] Building eureka-server 1.0.0                                       [2/4]
+[INFO]   from eureka-server\pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] Loaded 74 auto-discovered prefixes for remote repository apache.snapshots (prefixes-apache.snapshots.txt)
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ eureka-server ---
+[INFO] Copying 1 resource from src\main\resources to target\classes
+[INFO] Copying 0 resource from src\main\resources to target\classes
+[INFO] 
+[INFO] --- compiler:3.11.0:compile (default-compile) @ eureka-server ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ eureka-server ---
+[INFO] skip non existing resourceDirectory C:\Users\imrane\Desktop\lachguer\microservices-clients-synchrones\eureka-server\src\test\resources
+[INFO] 
+[INFO] --- compiler:3.11.0:testCompile (default-testCompile) @ eureka-server ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- surefire:3.1.2:test (default-test) @ eureka-server ---
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- jar:3.3.0:jar (default-jar) @ eureka-server ---
+[INFO] Building jar: C:\Users\imrane\Desktop\lachguer\microservices-clients-synchrones\eureka-server\target\eureka-server-1.0.0.jar
+[INFO] 
+[INFO] --- spring-boot:3.2.12:repackage (repackage) @ eureka-server ---
+[INFO] Loaded 50 auto-discovered prefixes for remote repository ow2-snapshot (prefixes-ow2-snapshot.txt)
+[INFO] Replacing main artifact C:\Users\imrane\Desktop\lachguer\microservices-clients-synchrones\eureka-server\target\eureka-server-1.0.0.jar with repackaged archive, adding nested dependencies in BOOT-INF/.
+[INFO] The original artifact has been renamed to C:\Users\imrane\Desktop\lachguer\microservices-clients-synchrones\eureka-server\target\eureka-server-1.0.0.jar.original
+[INFO] 
+[INFO] ---------------------< ma.imrane:service-voiture >----------------------
+[INFO] Building service-voiture 1.0.0                                     [3/4]
+[INFO]   from service-voiture\pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ service-voiture ---
+[INFO] Copying 3 resources from src\main\resources to target\classes
+[INFO] Copying 0 resource from src\main\resources to target\classes
+[INFO] 
+[INFO] --- compiler:3.11.0:compile (default-compile) @ service-voiture ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ service-voiture ---
+[INFO] skip non existing resourceDirectory C:\Users\imrane\Desktop\lachguer\microservices-clients-synchrones\service-voiture\src\test\resources
+[INFO] 
+[INFO] --- compiler:3.11.0:testCompile (default-testCompile) @ service-voiture ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- surefire:3.1.2:test (default-test) @ service-voiture ---
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- jar:3.3.0:jar (default-jar) @ service-voiture ---
+[INFO] Building jar: C:\Users\imrane\Desktop\lachguer\microservices-clients-synchrones\service-voiture\target\service-voiture-1.0.0.jar
+[INFO] 
+[INFO] --- spring-boot:3.2.12:repackage (repackage) @ service-voiture ---
+[INFO] Replacing main artifact C:\Users\imrane\Desktop\lachguer\microservices-clients-synchrones\service-voiture\target\service-voiture-1.0.0.jar with repackaged archive, adding nested dependencies in BOOT-INF/.
+[INFO] The original artifact has been renamed to C:\Users\imrane\Desktop\lachguer\microservices-clients-synchrones\service-voiture\target\service-voiture-1.0.0.jar.original
+[INFO] 
+[INFO] ----------------------< ma.imrane:service-client >----------------------
+[INFO] Building service-client 1.0.0                                      [4/4]
+[INFO]   from service-client\pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ service-client ---
+[INFO] Copying 3 resources from src\main\resources to target\classes
+[INFO] Copying 0 resource from src\main\resources to target\classes
+[INFO] 
+[INFO] --- compiler:3.11.0:compile (default-compile) @ service-client ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ service-client ---
+[INFO] skip non existing resourceDirectory C:\Users\imrane\Desktop\lachguer\microservices-clients-synchrones\service-client\src\test\resources
+[INFO] 
+[INFO] --- compiler:3.11.0:testCompile (default-testCompile) @ service-client ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- surefire:3.1.2:test (default-test) @ service-client ---
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- jar:3.3.0:jar (default-jar) @ service-client ---
+[INFO] Building jar: C:\Users\imrane\Desktop\lachguer\microservices-clients-synchrones\service-client\target\service-client-1.0.0.jar
+[INFO] 
+[INFO] --- spring-boot:3.2.12:repackage (repackage) @ service-client ---
+[INFO] Replacing main artifact C:\Users\imrane\Desktop\lachguer\microservices-clients-synchrones\service-client\target\service-client-1.0.0.jar with repackaged archive, adding nested dependencies in BOOT-INF/.
+[INFO] The original artifact has been renamed to C:\Users\imrane\Desktop\lachguer\microservices-clients-synchrones\service-client\target\service-client-1.0.0.jar.original
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary for microservices-clients-synchrones 1.0.0:
+[INFO] 
+[INFO] microservices-clients-synchrones ................... SUCCESS [  0.003 s]
+[INFO] eureka-server ...................................... SUCCESS [  7.108 s]
+[INFO] service-voiture .................................... SUCCESS [  0.988 s]
+[INFO] service-client ..................................... SUCCESS [  1.492 s]
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  11.140 s
+[INFO] Finished at: 2026-10-15T02:26:32+01:00
+[INFO] ------------------------------------------------------------------------

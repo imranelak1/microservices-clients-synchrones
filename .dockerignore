@@ -1,0 +1,6 @@
+.git
+.benchmark-work
+**/target
+results
+evidence
+screenshots

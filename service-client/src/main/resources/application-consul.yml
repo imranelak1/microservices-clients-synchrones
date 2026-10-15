@@ -1,0 +1,10 @@
+spring:
+  cloud:
+    consul:
+      host: ${CONSUL_HOST:localhost}
+      port: ${CONSUL_PORT:8500}
+      discovery:
+        prefer-ip-address: true
+        ip-address: ${SERVICE_IP:127.0.0.1}
+        health-check-path: /actuator/health
+        health-check-interval: 5s
